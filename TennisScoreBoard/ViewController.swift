@@ -37,11 +37,7 @@ class ViewController: UIViewController {
     // 得分
     func addPoint (number: Int) {
         realPointScore[number] = realPointScore[number] + pointScore[pointScoreforIndex[number]]
-        if number == 0 {
-            pointScoreforIndex[0] = pointScoreforIndex[0] + 1
-        } else if number == 1 {
-            pointScoreforIndex[1] = pointScoreforIndex[1] + 1
-        }
+        pointScoreforIndex[number] = pointScoreforIndex[number] + 1
         if pointScoreforIndex[0] > 2, pointScoreforIndex[1] > 2 {
             pointDeuce(number: number)
         } else if pointScoreforIndex[0] == 4 || pointScoreforIndex[1] == 4 {
